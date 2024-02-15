@@ -1,0 +1,41 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+
+  <br><br>
+  <div class="login-wrap">
+    {% if msg %}
+    <h2>{{ msg }}</h2>
+    {% else %}
+    <h2>Login</h2>
+    {% endif %}
+
+    <div class="form">
+      <form method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Username" name="username" />
+        <input type="password" placeholder="Password" name="password" />
+        <button type="submit"> Sign in </button>
+        <a href="#">
+          <p> Don't have an account? Register </p>
+        </a>
+      </div>
+      </form>
+  </div>
+  <script src="{% static 'js/login.js' %}"></script>
+</body>
+
+</html>
+{% endblock content %}

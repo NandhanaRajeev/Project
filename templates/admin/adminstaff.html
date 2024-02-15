@@ -1,0 +1,271 @@
+{% extends 'bases/baseadmin.html' %}
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>College Sports Management Dashboard - Staff Admin</title>
+    <-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color:  #f2f5f8;
+            /* Set your desired background color */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            margin: 0;
+            /* Remove default margin */
+        }
+
+    .dashboard-header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    /* Updated styling for better visual appeal */
+    .card {
+        background-color: #fff;
+        /* White background for cards */
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* .quick-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .quick-links li {
+        margin-bottom: 10px;
+    } */
+
+    /* Added top padding to align the sidebar */
+    .sidebar {
+        background-color: #34495e;
+        color: #fff;
+        height: 100vh;
+        padding-top: 20px;
+    }
+
+    /* Added margin to the main content for proper spacing */
+    .main-content {
+        margin-top: 5px;
+    }
+
+    /* Announcements Section Styling */
+    .announcement-section {
+        margin-top: 20px;
+    }
+
+    .announcement-card {
+        background-color: #3498db;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+        .announcement-card-header {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head> -->
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <!-- <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="admindashboard.html">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adminstudent.html">
+                                <i class="fas fa-users"></i> Students
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adminstaff.html">
+                                <i class="fas fa-calendar-alt"></i> Staffs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> -->
+
+            <!-- Main content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <!-- <div class="dashboard-header">
+                    <h2>Welcome to the Staff Admin Dashboard</h2>
+                </div> -->
+
+                <!-- <div class="main-content"> -->
+                    <!-- Staff Overview Section -->
+                    <!-- <div class="mt-4">
+                        <h4>Staff Overview</h4> -->
+                        <!-- Replace the following with actual staff-related content -->
+                        <!-- <div class="card-deck">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Staff</h5>
+                                    <p class="card-text">Placeholder for total staff count</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Staff Quick Links -->
+                    <!-- <div class="mt-4">
+                        <h4>Quick Links</h4>
+                        <ul class="quick-links">
+                            <li><a href="#">Manage Staff</a></li>
+                            <li><a href="#">View Staff Attendance</a></li> -->
+                            <!-- Add more links as needed -->
+                        <!-- </ul>
+                    </div> -->
+
+                    <!-- Announcements Section -->
+                    <!-- <div class="announcement-section">
+                        <h4>Announcements</h4> -->
+                        <!-- Add announcements-related content here -->
+                        <!-- <div class="announcement-card">
+                            <div class="announcement-card-header">
+                                Announcement Title
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                    tincidunt, sem et aliquam laoreet, orci tortor rhoncus elit.</p>
+                            </div>
+                        </div><br><br><br>
+                        <!-- Add more cards for additional announcements -->
+
+                        <!-- Student Review -->
+
+                        <!-- <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Admin Panel</title> -->
+                        <style>
+                            /* body {
+                                    font-family: Arial, sans-serif;
+                                    background-color: #f2f2f2;
+                                    margin: 0;
+                                    padding: 0;
+                                } */
+                            .container {
+                                width: 80%;
+                                margin: 20px auto;
+                                background-color: #e57171;
+                                padding: 20px;
+                                border-radius: 8px;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                            }
+
+                            h2 {
+                                text-align: center;
+                                color: #333;
+                            }
+
+                            table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                margin-top: 20px;
+                            }
+
+                            th,
+                            td {
+                                border: 1px solid #ddd;
+                                padding: 12px;
+                                text-align: left;
+                            }
+
+                            th {
+                                background-color: #cd5f5f;
+                            }
+
+                            tr:nth-child(even) {
+                                background-color: #cd5f5f;
+                            }
+
+                            .delete-btn {
+                                background-color: #f44336;
+                                color: white;
+                                padding: 8px 16px;
+                                border: none;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease;
+                            }
+
+                            .delete-btn:hover {
+                                background-color: #d32f2f;
+                            }
+                        </style>
+                        </head>
+
+                        <body>
+                            <br><br>
+                            <div class="container">
+                                <h2>Student Assessment Reviews</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Message</th>
+                                            <!-- <th>Action</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in ctct %}
+                                        <tr>
+                                            <td>{{ i.name }}</td>
+                                            <td>{{ i.email }}</td>
+                                            <td>{{ i.phone }}</td>
+                                            <td>{{ i.message }}</td>
+                                            <!-- <td><button class="delete-btn">Delete</button></td> -->
+                                        </tr>
+                                        {% endfor %}
+                                        <!-- Additional rows can be added here dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- </body>
+                        </html> -->
+
+                            <!-- Student Review ends here -->
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body> -->
+
+    <!-- </html> -->
+    {% endblock content %}

@@ -1,0 +1,180 @@
+{% extends 'bases/baseadmin.html' %}
+{% block content %}
+<style>
+    body {
+        background-color: #f2f5f8;
+        /* Set your desired background color */
+        font-family: 'Arial', sans-serif;
+        color: #fff;
+    }
+
+    .dashboard-header {
+        background-color: #7a45;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #297fb8;
+        display: flex;
+        justify-content: space-between;
+        /* Align items horizontally */
+        align-items: center;
+        /* Align items vertically */
+    }
+
+    .logout-btn {
+        color: #fff;
+    }
+
+    .sidebar {
+        background-color: #34495e;
+        color: #fff;
+        height: 100vh;
+        padding-top: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-deck {
+        margin-bottom: 20px;
+    }
+
+    .quick-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .quick-links li {
+        margin-bottom: 10px;
+    }
+
+    .register-form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* body {
+    font-family: Arial, sans-serif;
+}
+
+.admin-panel {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+.action-btn {
+    background-color: #ff6666;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+</style>
+
+
+
+<div class="main-content">
+    <!-- Overview Cards -->
+    <div class="card-deck">
+        <div class="card bg-info text-white">
+            <div class="card-body">
+                <h5 class="card-title">Total Students</h5>
+                <p class="card-text">{{total_students}}</p>
+            </div>
+        </div>
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Total Staffs</h5>
+                <p class="card-text">{{total_staffs}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Quick Links -->
+<!-- <div class="mt-4">
+    <h4>Quick Links</h4>
+    <ul class="quick-links">
+        <li><a href="#" class="text-info">Manage Students</a></li>
+        <li><a href="#" class="text-success">Manage Staffs</a></li>
+        <li><a href="#" class="text-warning">View Attendance</a></li>
+        <li><a href="register.html" class="text-danger">Register New</a></li> -->
+        <!-- Add more links as needed -->
+    <!-- </ul>
+</div> --> -->
+
+<!-- New Registration Section -->
+<div class="mt-4 register-form">
+    <h4 class="text-muted">Register New</h4>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="reg_no">Register No:</label>
+            <input type="text" class="form-control" id="reg_no" name="reg_no" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="form3Example4cd">Repeat your password</label>
+            <input type="password" id="form3Example4cd" class="form-control" id="Cpass" name="Cpass" />
+            
+        </div>
+        
+        <!-- Add more registration fields as needed -->
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <br>
+    <br>
+</div>
+
+
+</div>
+
+
+{% endblock content %}

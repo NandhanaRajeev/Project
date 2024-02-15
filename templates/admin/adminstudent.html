@@ -1,0 +1,216 @@
+{% extends 'bases/baseadmin.html' %}
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>College Sports Management Dashboard - Admin Student</title>
+    <!- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color:  #f2f5f8;
+            /* Set your desired background color */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            margin: 0;
+            /* Remove default margin */
+        }
+
+        .dashboard-header {
+            background-color: #3498db;
+            /* Header background color */
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            /* Align items horizontally */
+            align-items: center;
+            /* Align items vertically */
+        }
+
+        .logout-btn {
+            color: #fff;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Updated styling for better visual appeal */
+        .table {
+            background-color: #fff;
+            /* White background for tables */
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #3498db;
+            /* Card header background color */
+            color: #fff;
+        }
+
+        /* Added styling for the sidebar */
+        .sidebar {
+            background-color: #34495e;
+            color: #3498db;
+            /* Blue text color for sidebar links */
+            height: 100vh;
+            padding-top: 20px;
+        }
+
+        .sidebar-sticky {
+            position: sticky;
+            top: 20px;
+        }
+
+        .nav-link {
+            color: #3498db;
+            /* Blue text color for sidebar links */
+        }
+    </style>
+</head> 
+
+<body>
+
+    <!-- <div class="container-fluid">
+        <div class="row"> -->
+            <!-- Sidebar -->
+            <!-- <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="admindashboard.html">
+                                <i class="fas fa-tachometer-alt"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adminstudent.html">
+                                <i class="fas fa-users"></i> Students
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adminstaff.html">
+                                <i class="fas fa-calendar-alt"></i> Staffs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav> -->
+
+            <!-- Main content -->
+            <!-- <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="dashboard-header">
+                    <h2>Welcome to the Admin Dashboard</h2>
+                    <a href="#" class="btn btn-danger logout-btn" onclick="logout()">Logout</a>
+                </div> -->
+
+                <div class="main-content">
+                    <!-- Student Attendance Section -->
+                    <div class="mt-4">
+                        <h4>Student Attendance</h4>
+
+                        <!-- Replace the following with actual attendance-related content -->
+                        <table class="table">
+
+                            <thead>
+                                <tr>
+                                    <!-- <th scope="col">Student ID</th> -->
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for i in ctct %}
+
+                                <tr>
+                            
+                                    <td>{{ i.name }}</td>
+                                    <td>{{ i.email }}</td>
+                                    <td>{{ i.phone }}</td>
+                                    <td>{{ i.message }}</td>
+                                </tr>
+                                {% endfor %}
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+
+
+                    <!-- Student Support Messages Section -->
+                    <!-- <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Admin Panel</title>
+                        <link rel="stylesheet" href="styles.css">
+                    </head>
+                    <body> -->
+                       
+                        <!-- <script src="script.js"></script>
+                    </body>
+                    </html> -->
+                    
+                    <!-- <div class="mt-4">
+                        <h4>Student Support Messages</h4> -->
+                        <!-- Add messages-related content here -->
+                        <!-- <div class="card">
+                            <div class="card-header">
+                                Message from John Doe
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                    tincidunt, sem et aliquam laoreet, orci tortor rhoncus elit.</p>
+                            </div>
+                        </div> -->
+                        <!-- Add more cards for additional messages -->
+                    </div>
+
+                    <!-- Registration Form Responses Section -->
+                    <!-- <div class="mt-4">
+                        <h4>Responses from Registration Form</h4> -->
+                        <!-- Add responses-related content here -->
+                        <!-- <div class="card">
+                            <div class="card-header">
+                                Response from John Doe
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                                    tincidunt, sem et aliquam laoreet, orci tortor rhoncus elit.</p>
+                            </div>
+                        </div> -->
+                        <!-- Add more cards for additional responses -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function logout() {
+            // Implement your logout functionality here
+            alert("Logout clicked. Implement your logout functionality.");
+        }
+    </script>
+
+</body>
+
+</html> -->
+{% endblock content %}
